@@ -2,6 +2,7 @@ import { StatusBar } from "expo-status-bar";
 import React from "react";
 import { StyleSheet, Text, View, ActivityIndicator } from "react-native";
 import LoginScreen from "./src/screens/LoginScreen/index";
+import Navigation from "./src/navigator/index";
 import { useFonts } from "expo-font";
 import font from "./assets/fonts/marker.ttf";
 
@@ -12,7 +13,7 @@ export default function App() {
   if (!fontsLoaded) {
     return <ActivityIndicator size="large" color="#00ff00" />;
   } else {
-    return <LoginScreen />;
+    return <Navigation />;
   }
 }
 
@@ -20,7 +21,5 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
   },
 });
